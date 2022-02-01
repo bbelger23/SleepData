@@ -7,6 +7,9 @@ namespace SleepData
     {
         static void Main(string[] args)
         {
+
+            var file = "data.txt";
+
             // ask for input
             Console.WriteLine("Enter 1 to create data file.");
             Console.WriteLine("Enter 2 to parse data.");
@@ -34,7 +37,7 @@ namespace SleepData
                 Random rnd = new Random();
 
                 // create file
-                StreamWriter sw = new StreamWriter("data.txt");
+                StreamWriter sw = new StreamWriter(file);
                 // loop for the desired # of weeks
                 while (dataDate < dataEndDate)
                 {
@@ -55,7 +58,19 @@ namespace SleepData
             }
             else if (resp == "2")
             {
-                // TODO: parse data file
+                if (File.Exists(file))
+                {
+                    // read data from file
+                    StreamReader sr = new StreamReader(file);
+                    while (!sr.EndOfStream)
+                    {
+
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("File does not exist!");
+                }
 
             }
         }
