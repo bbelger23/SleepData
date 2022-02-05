@@ -68,8 +68,12 @@ namespace SleepData
 
                         string[] week = row.Split(",");
 
-                        Console.WriteLine(row);
+                        DateTime date = DateTime.Parse(week[0]);
+
+                        int[] hoursSleep = Array.ConvertAll(week[1].Split('|'), int.Parse);
+
                         Console.WriteLine(week[0]);
+                        Console.WriteLine(hoursSleep[1]);
                     }
                 }
                 else
