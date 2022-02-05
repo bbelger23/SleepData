@@ -73,7 +73,10 @@ namespace SleepData
                         int[] hoursSleep = Array.ConvertAll(week[1].Split('|'), int.Parse);
 
                         Console.WriteLine($"Week of {date:MMM}, {date:dd}, {date:yyyy}");
-                        Console.WriteLine(hoursSleep[1]);
+                        Console.WriteLine($"{"Mo",3}{"Tu",3}{"We",3}{"Th",3}{"Fr",3}{"Sa",3}{"Su",3}");
+                        Console.WriteLine($"{"--",3}{"--",3}{"--",3}{"--",3}{"--",3}{"--",3}{"--",3}");
+                        Console.WriteLine($"{hoursSleep[0],3}{hoursSleep[1],3}{hoursSleep[2],3}{hoursSleep[3],3}{hoursSleep[4],3}{hoursSleep[5],3}{hoursSleep[6],3}");
+                        Console.WriteLine();
                     }
                 }
                 else
