@@ -64,7 +64,12 @@ namespace SleepData
                     StreamReader sr = new StreamReader(file);
                     while (!sr.EndOfStream)
                     {
+                        string row = sr.ReadLine();
 
+                        string[] week = row.Split(",");
+
+                        Console.WriteLine(row);
+                        Console.WriteLine(week[0]);
                     }
                 }
                 else
