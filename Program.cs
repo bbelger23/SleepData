@@ -72,7 +72,7 @@ namespace SleepData
 
                         int[] hoursSleep = Array.ConvertAll(week[1].Split('|'), int.Parse);
 
-                        Console.WriteLine(week[0]);
+                        Console.WriteLine($"Week of {date:MMM}, {date:dd}, {date:yyyy}");
                         Console.WriteLine(hoursSleep[1]);
                     }
                 }
